@@ -1,4 +1,4 @@
-package com.thai.maesquecodamapi.src;
+package com.thai.maesquecodamapi.src.entity;
 
 import lombok.*;
 import org.hibernate.Hibernate;
@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
@@ -14,11 +15,10 @@ import java.util.Objects;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class MaesQueCodam {
+public class MaesQueCodam implements Serializable {
 
     @javax.persistence.Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
     Long id;
 
     String nome;
